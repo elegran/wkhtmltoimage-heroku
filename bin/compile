@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+echo "-----> Installing wkhtmltoimage 0.12.5"
+BIN_DIR=$(cd $(dirname $0); pwd)
+cd $1
+mkdir -p bin
+
+echo "-----> Copying wkhtmltoimage"
+cp "$BIN_DIR/wkhtmltoimage" "bin/"
+
+echo "-----> Building runtime environment"
+chmod +x "bin/wkhtmltoimage"
