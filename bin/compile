@@ -2,12 +2,11 @@
 echo "-----> Installing wkhtmltoimage 0.12.5"
 BIN_DIR=$(cd $(dirname $0); pwd)
 cd $1
-mkdir -p bin
 
 echo "-----> Copying wkhtmltoimage"
-cp "$BIN_DIR/wkhtmltoimage" "bin/"
+cp "$BIN_DIR/wkhtmltoimage" "/usr/local/bin/"
 
 echo "-----> Building runtime environment"
 chmod +x "bin/wkhtmltoimage"
 
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/usr/local/bin/wkhtmltoimage
